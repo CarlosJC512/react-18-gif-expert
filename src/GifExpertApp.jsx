@@ -13,7 +13,6 @@ export const GifExpertApp = () => {
         setCategories( [ newCategory, ...categories ] );
     }
 
-
     return (
         <>
             <header className="header">
