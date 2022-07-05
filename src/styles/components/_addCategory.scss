@@ -3,11 +3,11 @@
     flex-direction: column;
 }
 .input {
-    background: #acacac;
+    background: #ddd9d9;
     border: none;
     border-radius: 20px;
-    box-shadow: inset 7px 7px 14px #818181, inset -7px -7px 14px #d7d7d7;
-    color: black;
+    box-shadow: inset 7px 7px 14px #b6b2b2, inset -7px -7px 14px #e4e1e1;
+    color: rgb(51, 51, 51);
     flex-grow: 1;
     font-size: 1rem;
     margin-bottom: 10px;
@@ -16,7 +16,7 @@
 
     
     &:focus {
-        background: #acacac;
-        box-shadow: inset -7px -7px 14px #818181, inset 7px 7px 14px #d7d7d7;
+        background: #ddd9d9;
+        box-shadow: inset -7px -7px 14px #b9b6b6, inset 7px 7px 14px #f1ecec;
     }
 }

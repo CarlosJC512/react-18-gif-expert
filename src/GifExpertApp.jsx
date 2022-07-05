@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { AddCategory, GifGrid } from './components';
+import { useCounter } from './hooks/useCounter';
 
 export const GifExpertApp = () => {
 
     const [categories, setCategories] = useState(['Perros']);
+    const { counter, increment, decrement } = useCounter(0);
 
     const onAddCatetegory = (newCategory) => {
         const categorias = JSON.stringify(categories).toLowerCase();
@@ -12,7 +14,7 @@ export const GifExpertApp = () => {
         if( categorias.includes(categoria)) return;
         setCategories( [ newCategory, ...categories ] );
     }
-
+    // console.log();
     return (
         <>
             <header className="header">
@@ -28,7 +30,10 @@ export const GifExpertApp = () => {
                     categories.map( category => (
                         <GifGrid 
                             key={ category } 
-                            category={ category } 
+                            category={ category }
+                            counter={ counter }
+                            increment={ () => increment(12) }
+                            decrement={ () => decrement(12) } 
                         />
                     ) ) 
                 }
