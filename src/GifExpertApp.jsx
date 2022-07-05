@@ -11,31 +11,31 @@ export const GifExpertApp = () => {
         const categorias = JSON.stringify(categories).toLowerCase();
         const categoria = JSON.stringify(newCategory).toLowerCase();
 
-        if( categorias.includes(categoria)) return;
-        setCategories( [ newCategory, ...categories ] );
+        if (categorias.includes(categoria)) return;
+        setCategories([newCategory, ...categories]);
     }
-    // console.log();
+
     return (
         <>
             <header className="header">
-                <h1>GifExpertApp</h1>
+                <h1>GifApp</h1>
             </header>
 
             <div className="container">
-                <AddCategory 
-                    onNewCategory={ value => onAddCatetegory(value) } 
+                <AddCategory
+                    onNewCategory={value => onAddCatetegory(value)}
                 />
 
-                { 
-                    categories.map( category => (
-                        <GifGrid 
-                            key={ category } 
-                            category={ category }
-                            counter={ counter }
-                            increment={ () => increment(12) }
-                            decrement={ () => decrement(12) } 
+                {
+                    categories.map(category => (
+                        <GifGrid
+                            key={category}
+                            category={category}
+                            counter={counter}
+                            increment={() => increment(12)}
+                            decrement={() => decrement(12)}
                         />
-                    ) ) 
+                    ))
                 }
 
             </div>

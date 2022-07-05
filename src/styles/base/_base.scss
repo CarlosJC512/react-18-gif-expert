@@ -1,4 +1,6 @@
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,6 +12,8 @@ body {
     flex-direction: column;
     font-family: Helvetica, Arial, sans-serif;
     min-height: 100vh;
+    scroll-behavior: auto;
+    overflow-y: auto;
 }
 
 .pointer {
